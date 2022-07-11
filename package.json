@@ -1,0 +1,42 @@
+{
+  "name": "my-app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpspeaks/express-electron"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build:prod": "electron-builder --win",
+    "build:publish": "set GH_TOKEN=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 && electron-builder --win --publish always"
+  },
+  "build": {
+    "extends": null,
+    "appId": "com.example.express.electron",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "publish": [
+        "github"
+      ]
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "electron-updater": "^5.0.5",
+    "express": "^4.18.1",
+    "file-extension": "^4.0.5",
+    "octokit": "^1.8.1",
+    "superagent": "^8.0.0"
+  },
+  "devDependencies": {
+    "electron": "^19.0.8",
+    "electron-builder": "^23.1.0"
+  }
+}
